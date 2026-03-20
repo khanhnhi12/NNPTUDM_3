@@ -1,0 +1,106 @@
+:root {
+  --border: #d9d9d9;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  margin: 16px;
+  color: #111;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.toolbar input,
+.toolbar select,
+.toolbar button {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.toolbar button {
+  cursor: pointer;
+  background: #fff;
+}
+
+.toolbar button.active {
+  border-color: #111;
+  font-weight: 600;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+/* zebra: 1 trắng */
+.admin-table tbody tr:nth-child(odd) {
+  background: #fff;
+  color: #111;
+}
+
+/* zebra: 1 đen */
+.admin-table tbody tr:nth-child(even) {
+  background: #000;
+  color: #fff;
+}
+
+/* ảnh: hiển thị toàn bộ (không crop) */
+.cell-img {
+  width: 150px;
+}
+.cell-img img {
+  width: 120px;
+  height: 90px;
+  object-fit: contain; /* quan trọng */
+  display: block;
+  background: #f3f3f3;
+  border-radius: 8px;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.pagination button {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.muted {
+  color: #666;
+}

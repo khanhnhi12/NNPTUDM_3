@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảng quản lý sản phẩm</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h2>Bảng quản lý sản phẩm</h2>
+
+    <div class="toolbar">
+      <input id="search" placeholder="Tìm theo title..." />
+
+      <label>
+        Hiển thị:
+        <select id="pageSize">
+          <option value="5">5 / trang</option>
+          <option value="10">10 / trang</option>
+          <option value="20">20 / trang</option>
+        </select>
+      </label>
+
+      <button id="sortPrice">Sắp xếp giá</button>
+      <button id="sortTitle">Sắp xếp tên</button>
+
+      <span class="muted" id="meta"></span>
+    </div>
+
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th style="width: 70px">ID</th>
+          <th class="cell-img">Ảnh</th>
+          <th>Title</th>
+          <th style="width: 110px">Price</th>
+          <th style="width: 220px">Category</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <div class="pagination">
+      <button id="prev">Prev</button>
+      <span id="pageInfo"></span>
+      <button id="next">Next</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
